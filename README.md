@@ -1,3 +1,3 @@
 # Meu-Reposit-rio
-Primeiro repositório
+Primeiro repositório.
  
