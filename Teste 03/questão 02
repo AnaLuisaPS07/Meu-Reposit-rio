@@ -1,0 +1,46 @@
+package main
+
+import "fmt"
+
+func troca(slice []int, i, j int) {
+ slice[i], slice[j] = slice[j], slice[i]
+}
+
+func trocaOpostosSeMenor(slice1 []int) {
+ n := len(slice1)
+  for i := 0; i < n/2; i++ {
+   j := n - i - 1
+    if slice1[i] < slice1[j] {
+     troca(slice1, i, j)
+    }
+  }
+}
+
+func main() {
+	
+ var casos int
+  fmt.Println ("Digite o número de casos: ")
+   fmt.Scan(&casos)
+
+ for c := 0; c < casos; c++ {
+  var n int
+   fmt.Println ("Digite a quantidade de elementos: ")
+    fmt.Scan(&n)
+
+ numeros := make([]int, n)
+  fmt.Println ("Digite a quantidade de elementos: ")
+   for i := 0; i < n; i++ {
+	  fmt.Scan(&numeros[i])
+        }
+
+ trocaOpostosSeMenor(numeros)
+
+ for i, val := range numeros {
+  if i > 0 {
+   fmt.Print(" ")
+            }
+    fmt.Print(val)
+        }
+ fmt.Println()
+    }
+}
